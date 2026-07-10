@@ -1,0 +1,10 @@
+cd "$WAV_SRC"
+
+./configure \
+  --prefix="$WAV_SYSROOT" \
+  --sysconfdir="$WAV_SYSROOT/etc" \
+  --localstatedir="$WAV_SYSROOT/var" \
+  --disable-static \
+  --enable-shared
+
+make -j"$WAV_JOBS"
